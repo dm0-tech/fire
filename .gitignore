@@ -1,7 +1,1 @@
-__pycache__/
-*.pyc
-.pytest_cache/
-.pycache-build/
-sim/out/
-.venv/
-.venv311/
+.DS_Store
