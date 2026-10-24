@@ -1,0 +1,1433 @@
+{
+  "summary": {
+    "generated_at": "2026-10-14T19:33:14.762539+00:00",
+    "source": {
+      "markets": "https://gamma-api.polymarket.com/markets",
+      "history": "https://clob.polymarket.com/prices-history",
+      "sample_rule": "closed binary markets, duration >=7 days, volume >=1000, one highest-volume market per event, descending-id Gamma keyset pages"
+    },
+    "collection": {
+      "pages": 31,
+      "markets_seen": 3100,
+      "eligible_before_event_deduplication": 61,
+      "events_after_deduplication": 61,
+      "selected": 60
+    },
+    "coverage": {
+      "markets_with_history": 60,
+      "history_coverage_rate": 1.0,
+      "median_history_points": 105.5,
+      "credit_adjacent_keyword_markets": 0,
+      "explicit_multi_maturity_event_groups": 0
+    },
+    "sample_concentration": {
+      "categories": {
+        "(missing)": 60
+      },
+      "series": {
+        "WTA": 2,
+        "ATP": 1,
+        "ITF": 57
+      }
+    },
+    "calibration_by_days_before_close": {
+      "30": {
+        "n": 0
+      },
+      "7": {
+        "n": 59,
+        "mean_price": 0.5210847457627119,
+        "realised_frequency": 0.5084745762711864,
+        "brier": 0.21146722033898305,
+        "expected_calibration_error": 0.07484745762711863,
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "n": 5,
+            "mean_price": 0.11200000000000002,
+            "realised_frequency": 0.4
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "n": 15,
+            "mean_price": 0.2876666666666666,
+            "realised_frequency": 0.2
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6,
+            "n": 12,
+            "mean_price": 0.4816666666666667,
+            "realised_frequency": 0.5
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.8,
+            "n": 18,
+            "mean_price": 0.6813888888888889,
+            "realised_frequency": 0.6111111111111112
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "n": 9,
+            "mean_price": 0.8693333333333333,
+            "realised_frequency": 0.8888888888888888
+          }
+        ]
+      },
+      "1": {
+        "n": 0
+      }
+    },
+    "seven_day_volume_split": {
+      "median_market_volume": 2172.2641304999997,
+      "below_median": {
+        "n": 30,
+        "mean_price": 0.5406333333333334,
+        "realised_frequency": 0.4666666666666667,
+        "brier": 0.19085636666666667,
+        "expected_calibration_error": 0.07730000000000001,
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "n": 9,
+            "mean_price": 0.28833333333333333,
+            "realised_frequency": 0.1111111111111111
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6,
+            "n": 7,
+            "mean_price": 0.47500000000000003,
+            "realised_frequency": 0.42857142857142855
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.8,
+            "n": 9,
+            "mean_price": 0.6611111111111111,
+            "realised_frequency": 0.6666666666666666
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "n": 5,
+            "mean_price": 0.8698,
+            "realised_frequency": 0.8
+          }
+        ]
+      },
+      "at_or_above_median": {
+        "n": 29,
+        "mean_price": 0.5008620689655172,
+        "realised_frequency": 0.5517241379310345,
+        "brier": 0.23278879310344827,
+        "expected_calibration_error": 0.14155172413793105,
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "n": 5,
+            "mean_price": 0.11200000000000002,
+            "realised_frequency": 0.4
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "n": 6,
+            "mean_price": 0.2866666666666667,
+            "realised_frequency": 0.3333333333333333
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6,
+            "n": 5,
+            "mean_price": 0.491,
+            "realised_frequency": 0.6
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.8,
+            "n": 9,
+            "mean_price": 0.7016666666666667,
+            "realised_frequency": 0.5555555555555556
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "n": 4,
+            "mean_price": 0.86875,
+            "realised_frequency": 1.0
+          }
+        ]
+      }
+    },
+    "limits": {
+      "credit_specific_inference": "unsupported unless credit_adjacent_keyword_markets is materially nonzero",
+      "fractional_recovery": "not measured by binary settlement outcomes",
+      "liquidity_persistence": "not identified by sparse price history; requires historical order-book depth",
+      "term_structure": "not identified unless explicit_multi_maturity_event_groups is nonzero",
+      "dependence": "one market per event removes obvious duplicates but does not remove shared shocks"
+    }
+  },
+  "observations": [
+    {
+      "market_id": "5674049",
+      "event_id": "1185232",
+      "question": "Lisbon: Jessica Bouzas Maneiro vs Irene Burillo Escorihuela",
+      "category": "",
+      "series": "WTA",
+      "start_time": 1791929656,
+      "close_time": 1792582200,
+      "duration_days": 7.5525925925925925,
+      "volume": 745860.6539749998,
+      "outcome": 1.0,
+      "history_points": 103,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.815,
+          "timestamp": 1791976827,
+          "staleness_days": 0.006631944444444445
+        }
+      }
+    },
+    {
+      "market_id": "5674047",
+      "event_id": "1185231",
+      "question": "Rovereto: Harmony Tan vs Lucrezia Stefanini",
+      "category": "",
+      "series": "WTA",
+      "start_time": 1791929654,
+      "close_time": 1792596600,
+      "duration_days": 7.719282407407407,
+      "volume": 125244.53335399998,
+      "outcome": 0.0,
+      "history_points": 117,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.365,
+          "timestamp": 1791991221,
+          "staleness_days": 0.006701388888888889
+        }
+      }
+    },
+    {
+      "market_id": "5674478",
+      "event_id": "1185388",
+      "question": "Olbia: Luca Nardi vs Lorenzo Carboni",
+      "category": "",
+      "series": "ATP",
+      "start_time": 1791932712,
+      "close_time": 1792594800,
+      "duration_days": 7.663055555555555,
+      "volume": 83493.06581000001,
+      "outcome": 1.0,
+      "history_points": 106,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.755,
+          "timestamp": 1791989420,
+          "staleness_days": 0.006712962962962963
+        }
+      }
+    },
+    {
+      "market_id": "5672206",
+      "event_id": "1184700",
+      "question": "M25 Santa Margherita di Pula: Matthew William Donald vs Giovanni Oradini",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921558,
+      "close_time": 1792576800,
+      "duration_days": 7.583819444444444,
+      "volume": 53868.80729699999,
+      "outcome": 1.0,
+      "history_points": 107,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.605,
+          "timestamp": 1791971418,
+          "staleness_days": 0.006736111111111111
+        }
+      }
+    },
+    {
+      "market_id": "5672692",
+      "event_id": "1184867",
+      "question": "W50 Quebec City: Valentina Ryser vs Yuki Naito",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922463,
+      "close_time": 1792594800,
+      "duration_days": 7.7816782407407405,
+      "volume": 22139.784735,
+      "outcome": 0.0,
+      "history_points": 135,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.615,
+          "timestamp": 1791989420,
+          "staleness_days": 0.006712962962962963
+        }
+      }
+    },
+    {
+      "market_id": "5676769",
+      "event_id": "1185950",
+      "question": "M25 Austin, TX: Zsombor Velcz vs Timo Legout",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791943156,
+      "close_time": 1792594800,
+      "duration_days": 7.542175925925926,
+      "volume": 18855.279182000002,
+      "outcome": 1.0,
+      "history_points": 104,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.13,
+          "timestamp": 1791989422,
+          "staleness_days": 0.006689814814814815
+        }
+      }
+    },
+    {
+      "market_id": "5672167",
+      "event_id": "1184661",
+      "question": "M25 Santa Margherita di Pula: Lorenzo Berto vs Andrey Chepelev",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921554,
+      "close_time": 1792566000,
+      "duration_days": 7.458865740740741,
+      "volume": 17587.45641800001,
+      "outcome": 1.0,
+      "history_points": 109,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.24,
+          "timestamp": 1791960624,
+          "staleness_days": 0.006666666666666667
+        }
+      }
+    },
+    {
+      "market_id": "5672216",
+      "event_id": "1184710",
+      "question": "M15 Szabolcsveresmart: Michael Gloeckler vs Vardan Manukyan",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921561,
+      "close_time": 1792576800,
+      "duration_days": 7.583784722222222,
+      "volume": 15863.449515000002,
+      "outcome": 0.0,
+      "history_points": 115,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.475,
+          "timestamp": 1791971415,
+          "staleness_days": 0.0067708333333333336
+        }
+      }
+    },
+    {
+      "market_id": "5672685",
+      "event_id": "1184860",
+      "question": "W15 Maceio: sofia omati albieri vs Fernanda Labrana",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922459,
+      "close_time": 1792587600,
+      "duration_days": 7.698391203703704,
+      "volume": 9443.347864000003,
+      "outcome": 0.0,
+      "history_points": 124,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.07,
+          "timestamp": 1791982215,
+          "staleness_days": 0.0067708333333333336
+        }
+      }
+    },
+    {
+      "market_id": "5672193",
+      "event_id": "1184687",
+      "question": "M15 Bol: Alan Wazny vs Stefan Popovic",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921556,
+      "close_time": 1792573200,
+      "duration_days": 7.542175925925926,
+      "volume": 9106.564551999998,
+      "outcome": 1.0,
+      "history_points": 99,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.56,
+          "timestamp": 1791967815,
+          "staleness_days": 0.0067708333333333336
+        }
+      }
+    },
+    {
+      "market_id": "5672644",
+      "event_id": "1184819",
+      "question": "W35 Monastir: Anna Shkutova vs Aleksandra Iankovskaia",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922456,
+      "close_time": 1792571400,
+      "duration_days": 7.510925925925926,
+      "volume": 7698.216171999998,
+      "outcome": 1.0,
+      "history_points": 98,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.745,
+          "timestamp": 1791966021,
+          "staleness_days": 0.006701388888888889
+        }
+      }
+    },
+    {
+      "market_id": "5672180",
+      "event_id": "1184674",
+      "question": "M25 Santa Margherita di Pula: Gabriele Crivellaro vs Jonas Forejtek",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921557,
+      "close_time": 1792571400,
+      "duration_days": 7.521331018518518,
+      "volume": 7387.866596,
+      "outcome": 0.0,
+      "history_points": 99,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.145,
+          "timestamp": 1791966020,
+          "staleness_days": 0.006712962962962963
+        }
+      }
+    },
+    {
+      "market_id": "5672687",
+      "event_id": "1184862",
+      "question": "W15 Maceio: Camila Romero vs Barbara Gatica",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922459,
+      "close_time": 1792587600,
+      "duration_days": 7.698391203703704,
+      "volume": 6469.509732,
+      "outcome": 0.0,
+      "history_points": 126,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.365,
+          "timestamp": 1791982218,
+          "staleness_days": 0.006736111111111111
+        }
+      }
+    },
+    {
+      "market_id": "5672672",
+      "event_id": "1184848",
+      "question": "W35 Monastir: Isabella Barrera Aguirre vs Tereza Krejcova",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922460,
+      "close_time": 1792580400,
+      "duration_days": 7.615046296296296,
+      "volume": 6443.696339,
+      "outcome": 1.0,
+      "history_points": 125,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.125,
+          "timestamp": 1791975018,
+          "staleness_days": 0.006736111111111111
+        }
+      }
+    },
+    {
+      "market_id": "5672663",
+      "event_id": "1184838",
+      "question": "W15 Sharm ElSheikh: Alyssa Reguer vs Victoria Pohle",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922458,
+      "close_time": 1792576800,
+      "duration_days": 7.573402777777778,
+      "volume": 5695.244024,
+      "outcome": 1.0,
+      "history_points": 132,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.41,
+          "timestamp": 1791971414,
+          "staleness_days": 0.006782407407407407
+        }
+      }
+    },
+    {
+      "market_id": "5676748",
+      "event_id": "1185936",
+      "question": "M15 Lexington, KY: Youcef Rihane vs Johan Oscar Lien",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791943155,
+      "close_time": 1792587600,
+      "duration_days": 7.458854166666667,
+      "volume": 5392.7312,
+      "outcome": 0.0,
+      "history_points": 100,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.68,
+          "timestamp": 1791982216,
+          "staleness_days": 0.006759259259259259
+        }
+      }
+    },
+    {
+      "market_id": "5672228",
+      "event_id": "1184722",
+      "question": "M15 Szabolcsveresmart: Tanguy Genier vs Dean Thurner",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921561,
+      "close_time": 1792584000,
+      "duration_days": 7.667118055555555,
+      "volume": 5281.194448999999,
+      "outcome": 1.0,
+      "history_points": 113,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.865,
+          "timestamp": 1791978626,
+          "staleness_days": 0.006643518518518518
+        }
+      }
+    },
+    {
+      "market_id": "5672668",
+      "event_id": "1184843",
+      "question": "W35 Santa Margherita di Pula: Bianca Jolie Fernandez vs Yasmin Ezzat",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922460,
+      "close_time": 1792576800,
+      "duration_days": 7.573379629629629,
+      "volume": 4382.521275,
+      "outcome": 0.0,
+      "history_points": 115,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.285,
+          "timestamp": 1791971416,
+          "staleness_days": 0.006759259259259259
+        }
+      }
+    },
+    {
+      "market_id": "5672229",
+      "event_id": "1184723",
+      "question": "M15 Maringa: Victor Pagotto vs Henrique Ortenblad Nogueira",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921561,
+      "close_time": 1792587600,
+      "duration_days": 7.708784722222222,
+      "volume": 4169.610173,
+      "outcome": 1.0,
+      "history_points": 134,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.885,
+          "timestamp": 1791982218,
+          "staleness_days": 0.006736111111111111
+        }
+      }
+    },
+    {
+      "market_id": "5676759",
+      "event_id": "1185943",
+      "question": "M15 Lexington, KY: Blaise Bicknell vs Gavin Goode",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791943155,
+      "close_time": 1792591200,
+      "duration_days": 7.500520833333334,
+      "volume": 3419.762728,
+      "outcome": 0.0,
+      "history_points": 100,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.715,
+          "timestamp": 1791985824,
+          "staleness_days": 0.006666666666666667
+        }
+      }
+    },
+    {
+      "market_id": "5672689",
+      "event_id": "1184864",
+      "question": "W15 Maceio: Sabrina Dias vs Luiza Sana",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922462,
+      "close_time": 1792591200,
+      "duration_days": 7.740023148148148,
+      "volume": 3336.0392789999996,
+      "outcome": 1.0,
+      "history_points": 135,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.91,
+          "timestamp": 1791985820,
+          "staleness_days": 0.006712962962962963
+        }
+      }
+    },
+    {
+      "market_id": "5672178",
+      "event_id": "1184672",
+      "question": "M15 Szabolcsveresmart: Arvid Nordquist vs Noah Thurner",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921557,
+      "close_time": 1792569600,
+      "duration_days": 7.500497685185185,
+      "volume": 3253.595952,
+      "outcome": 1.0,
+      "history_points": 98,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.795,
+          "timestamp": 1791964221,
+          "staleness_days": 0.006701388888888889
+        }
+      }
+    },
+    {
+      "market_id": "5672693",
+      "event_id": "1184868",
+      "question": "W50 Quebec City: Ariana Arseneault vs Justina Mikulskyte",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922463,
+      "close_time": 1792594800,
+      "duration_days": 7.7816782407407405,
+      "volume": 3198.823025,
+      "outcome": 1.0,
+      "history_points": 131,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.475,
+          "timestamp": 1791989420,
+          "staleness_days": 0.006712962962962963
+        }
+      }
+    },
+    {
+      "market_id": "5672623",
+      "event_id": "1184798",
+      "question": "W15 Sharm ElSheikh: Ellie Daniels vs Karla Popovic",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922454,
+      "close_time": 1792564200,
+      "duration_days": 7.427615740740741,
+      "volume": 3026.6315380000005,
+      "outcome": 0.0,
+      "history_points": 96,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.535,
+          "timestamp": 1791958822,
+          "staleness_days": 0.006689814814814815
+        }
+      }
+    },
+    {
+      "market_id": "5672691",
+      "event_id": "1184866",
+      "question": "W50 Quebec City: Kisa Yoshioka vs Hiromi Abe",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922463,
+      "close_time": 1792594800,
+      "duration_days": 7.7816782407407405,
+      "volume": 3022.7718579999996,
+      "outcome": 0.0,
+      "history_points": 132,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.09,
+          "timestamp": 1791989423,
+          "staleness_days": 0.006678240740740741
+        }
+      }
+    },
+    {
+      "market_id": "5681685",
+      "event_id": "1187259",
+      "question": "W35 Santa Margherita di Pula: Matilde Paoletti vs Giulia Paterno",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791965650,
+      "close_time": 1792571400,
+      "duration_days": 7.01099537037037,
+      "volume": 2865.8387749999997,
+      "outcome": 1.0,
+      "history_points": 24,
+      "credit_adjacent_keyword": false,
+      "snapshots": {}
+    },
+    {
+      "market_id": "5672208",
+      "event_id": "1184703",
+      "question": "M15 Offenbach: Filip Krolo vs Ziga Sesko",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921558,
+      "close_time": 1792576800,
+      "duration_days": 7.583819444444444,
+      "volume": 2822.0536199999997,
+      "outcome": 1.0,
+      "history_points": 116,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.205,
+          "timestamp": 1791971414,
+          "staleness_days": 0.006782407407407407
+        }
+      }
+    },
+    {
+      "market_id": "5672673",
+      "event_id": "1184847",
+      "question": "W35 Monastir: Katarina Kuzmova vs Victoria Milovanova",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922460,
+      "close_time": 1792580400,
+      "duration_days": 7.615046296296296,
+      "volume": 2786.6140090000004,
+      "outcome": 0.0,
+      "history_points": 125,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.655,
+          "timestamp": 1791975029,
+          "staleness_days": 0.006608796296296297
+        }
+      }
+    },
+    {
+      "market_id": "5672640",
+      "event_id": "1184815",
+      "question": "W15 Bol: Gloria De Santis vs Anita Tu",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922456,
+      "close_time": 1792567800,
+      "duration_days": 7.4692592592592595,
+      "volume": 2463.0733920000002,
+      "outcome": 0.0,
+      "history_points": 90,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.26,
+          "timestamp": 1791962418,
+          "staleness_days": 0.006736111111111111
+        }
+      }
+    },
+    {
+      "market_id": "5672661",
+      "event_id": "1184836",
+      "question": "W15 Sharm ElSheikh: Ustiniya Lekomtseva vs Andrea Roots",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922458,
+      "close_time": 1792576800,
+      "duration_days": 7.573402777777778,
+      "volume": 2381.949714,
+      "outcome": 1.0,
+      "history_points": 136,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.75,
+          "timestamp": 1791971414,
+          "staleness_days": 0.006782407407407407
+        }
+      }
+    },
+    {
+      "market_id": "5676754",
+      "event_id": "1185939",
+      "question": "M15 Lexington, KY: Enzo Kohlmann de Freitas vs Gavin Young",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791943155,
+      "close_time": 1792591200,
+      "duration_days": 7.500520833333334,
+      "volume": 1962.578547,
+      "outcome": 1.0,
+      "history_points": 97,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.245,
+          "timestamp": 1791985820,
+          "staleness_days": 0.006712962962962963
+        }
+      }
+    },
+    {
+      "market_id": "5672653",
+      "event_id": "1184828",
+      "question": "W35 Birmingham: Berfu Cengiz vs Jodie Anna Burrage",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922458,
+      "close_time": 1792573200,
+      "duration_days": 7.531736111111111,
+      "volume": 1823.6786840000002,
+      "outcome": 0.0,
+      "history_points": 100,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.355,
+          "timestamp": 1791967817,
+          "staleness_days": 0.0067476851851851856
+        }
+      }
+    },
+    {
+      "market_id": "5672645",
+      "event_id": "1184820",
+      "question": "W35 Monastir: Sofia Camila Rojas vs Chelsea Fontenel",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922456,
+      "close_time": 1792571400,
+      "duration_days": 7.510925925925926,
+      "volume": 1816.7380019999998,
+      "outcome": 1.0,
+      "history_points": 101,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.63,
+          "timestamp": 1791966022,
+          "staleness_days": 0.006689814814814815
+        }
+      }
+    },
+    {
+      "market_id": "5672209",
+      "event_id": "1184702",
+      "question": "M15 Offenbach: Guillaume Dalmasso vs Lewie Lane",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921558,
+      "close_time": 1792576800,
+      "duration_days": 7.583819444444444,
+      "volume": 1813.0012409999997,
+      "outcome": 1.0,
+      "history_points": 107,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.515,
+          "timestamp": 1791971416,
+          "staleness_days": 0.006759259259259259
+        }
+      }
+    },
+    {
+      "market_id": "5672213",
+      "event_id": "1184707",
+      "question": "M25 Luanda: Dorian Tremblay vs Courtney John Lock",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921558,
+      "close_time": 1792576800,
+      "duration_days": 7.583819444444444,
+      "volume": 1810.9853239999995,
+      "outcome": 1.0,
+      "history_points": 106,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.67,
+          "timestamp": 1791971415,
+          "staleness_days": 0.0067708333333333336
+        }
+      }
+    },
+    {
+      "market_id": "5676753",
+      "event_id": "1185940",
+      "question": "M15 Lexington, KY: Noah Zamora vs Jaden Weekes",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791943155,
+      "close_time": 1792591200,
+      "duration_days": 7.500520833333334,
+      "volume": 1743.332653,
+      "outcome": 1.0,
+      "history_points": 89,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.695,
+          "timestamp": 1791985820,
+          "staleness_days": 0.006712962962962963
+        }
+      }
+    },
+    {
+      "market_id": "5672192",
+      "event_id": "1184686",
+      "question": "M15 Offenbach: Yannik Kelm vs Calvin Mueller",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921556,
+      "close_time": 1792573200,
+      "duration_days": 7.542175925925926,
+      "volume": 1637.7412229999998,
+      "outcome": 0.0,
+      "history_points": 106,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.62,
+          "timestamp": 1791967816,
+          "staleness_days": 0.006759259259259259
+        }
+      }
+    },
+    {
+      "market_id": "5672225",
+      "event_id": "1184720",
+      "question": "M15 Szabolcsveresmart: Jan Hrazdil vs Achilles Belkovics",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921561,
+      "close_time": 1792584000,
+      "duration_days": 7.667118055555555,
+      "volume": 1619.535466,
+      "outcome": 1.0,
+      "history_points": 126,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.415,
+          "timestamp": 1791978623,
+          "staleness_days": 0.006678240740740741
+        }
+      }
+    },
+    {
+      "market_id": "5672655",
+      "event_id": "1184831",
+      "question": "W15 Bol: Ilinca Sagmar vs Lujza Zimenova",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922458,
+      "close_time": 1792573200,
+      "duration_days": 7.531736111111111,
+      "volume": 1573.703571,
+      "outcome": 0.0,
+      "history_points": 106,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.735,
+          "timestamp": 1791967819,
+          "staleness_days": 0.006724537037037037
+        }
+      }
+    },
+    {
+      "market_id": "5672211",
+      "event_id": "1184705",
+      "question": "M25 Luanda: Allan Gatoto vs Emerson Pedro",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921558,
+      "close_time": 1792576800,
+      "duration_days": 7.583819444444444,
+      "volume": 1566.4940550000001,
+      "outcome": 1.0,
+      "history_points": 105,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.954,
+          "timestamp": 1791971416,
+          "staleness_days": 0.006759259259259259
+        }
+      }
+    },
+    {
+      "market_id": "5672195",
+      "event_id": "1184689",
+      "question": "M15 Bol: Carles Cordoba vs Nik Mikovic",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921556,
+      "close_time": 1792573200,
+      "duration_days": 7.542175925925926,
+      "volume": 1551.9609770000002,
+      "outcome": 1.0,
+      "history_points": 102,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.625,
+          "timestamp": 1791967814,
+          "staleness_days": 0.006782407407407407
+        }
+      }
+    },
+    {
+      "market_id": "5672224",
+      "event_id": "1184717",
+      "question": "M15 Bol: Alex Kuperstein vs Felix Romeo",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921561,
+      "close_time": 1792580400,
+      "duration_days": 7.625451388888889,
+      "volume": 1474.9968840000001,
+      "outcome": 0.0,
+      "history_points": 111,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.605,
+          "timestamp": 1791975027,
+          "staleness_days": 0.006631944444444445
+        }
+      }
+    },
+    {
+      "market_id": "5672181",
+      "event_id": "1184675",
+      "question": "M25 Santa Margherita di Pula: Giuseppe La Vela vs Alexander Weis",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921556,
+      "close_time": 1792571400,
+      "duration_days": 7.5213425925925925,
+      "volume": 1466.494995,
+      "outcome": 0.0,
+      "history_points": 107,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.325,
+          "timestamp": 1791966025,
+          "staleness_days": 0.006655092592592593
+        }
+      }
+    },
+    {
+      "market_id": "5672183",
+      "event_id": "1184677",
+      "question": "M15 Monastir: Alvaro Peiro Serrano vs Mathys Picard",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921557,
+      "close_time": 1792571400,
+      "duration_days": 7.521331018518518,
+      "volume": 1437.762822,
+      "outcome": 0.0,
+      "history_points": 102,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.315,
+          "timestamp": 1791966024,
+          "staleness_days": 0.006666666666666667
+        }
+      }
+    },
+    {
+      "market_id": "5672632",
+      "event_id": "1184807",
+      "question": "W35 Santa Margherita di Pula: Franziska Sziedat vs Sveva Sveva Fumagalli",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922456,
+      "close_time": 1792566000,
+      "duration_days": 7.448425925925926,
+      "volume": 1355.2202359999999,
+      "outcome": 1.0,
+      "history_points": 88,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.82,
+          "timestamp": 1791960622,
+          "staleness_days": 0.006689814814814815
+        }
+      }
+    },
+    {
+      "market_id": "5672186",
+      "event_id": "1184680",
+      "question": "M15 Monastir: Samir Hamza Reguig vs Adam Lynch",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921557,
+      "close_time": 1792571400,
+      "duration_days": 7.521331018518518,
+      "volume": 1329.172694,
+      "outcome": 1.0,
+      "history_points": 101,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.65,
+          "timestamp": 1791966023,
+          "staleness_days": 0.006678240740740741
+        }
+      }
+    },
+    {
+      "market_id": "5672175",
+      "event_id": "1184669",
+      "question": "M15 Bol: Heorhii Shylov vs Kristijan Juhas",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921557,
+      "close_time": 1792567800,
+      "duration_days": 7.479664351851852,
+      "volume": 1316.6617649999998,
+      "outcome": 0.0,
+      "history_points": 89,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.335,
+          "timestamp": 1791962414,
+          "staleness_days": 0.006782407407407407
+        }
+      }
+    },
+    {
+      "market_id": "5672190",
+      "event_id": "1184684",
+      "question": "M15 Offenbach: Julien Penzlin vs Mika Petkovic",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921556,
+      "close_time": 1792573200,
+      "duration_days": 7.542175925925926,
+      "volume": 1250.831195,
+      "outcome": 0.0,
+      "history_points": 105,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.205,
+          "timestamp": 1791967814,
+          "staleness_days": 0.006782407407407407
+        }
+      }
+    },
+    {
+      "market_id": "5672179",
+      "event_id": "1184673",
+      "question": "M25 Santa Margherita di Pula: Branko Djuric vs Johan Nikles",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921557,
+      "close_time": 1792571400,
+      "duration_days": 7.521331018518518,
+      "volume": 1245.834202,
+      "outcome": 1.0,
+      "history_points": 105,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.555,
+          "timestamp": 1791966023,
+          "staleness_days": 0.006678240740740741
+        }
+      }
+    },
+    {
+      "market_id": "5672669",
+      "event_id": "1184844",
+      "question": "W35 Santa Margherita di Pula: Isabel Skoog vs Natalija Senic",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922460,
+      "close_time": 1792576800,
+      "duration_days": 7.573379629629629,
+      "volume": 1244.23949,
+      "outcome": 0.0,
+      "history_points": 105,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.26,
+          "timestamp": 1791971415,
+          "staleness_days": 0.0067708333333333336
+        }
+      }
+    },
+    {
+      "market_id": "5672670",
+      "event_id": "1184845",
+      "question": "W35 Santa Margherita di Pula: Beatrise Zeltina vs Ilary Pistola",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922460,
+      "close_time": 1792576800,
+      "duration_days": 7.573379629629629,
+      "volume": 1241.6090949999998,
+      "outcome": 1.0,
+      "history_points": 112,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.72,
+          "timestamp": 1791971417,
+          "staleness_days": 0.0067476851851851856
+        }
+      }
+    },
+    {
+      "market_id": "5672197",
+      "event_id": "1184691",
+      "question": "M15 Bol: Geoffrey Blancaneaux vs Charles Bertimon",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921556,
+      "close_time": 1792573200,
+      "duration_days": 7.542175925925926,
+      "volume": 1235.628081,
+      "outcome": 1.0,
+      "history_points": 104,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.825,
+          "timestamp": 1791967814,
+          "staleness_days": 0.006782407407407407
+        }
+      }
+    },
+    {
+      "market_id": "5672633",
+      "event_id": "1184808",
+      "question": "W15 Sharm ElSheikh: Tamina Kochta vs Clarissa Blomqvist",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922456,
+      "close_time": 1792567800,
+      "duration_days": 7.4692592592592595,
+      "volume": 1222.849634,
+      "outcome": 0.0,
+      "history_points": 102,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.505,
+          "timestamp": 1791962417,
+          "staleness_days": 0.0067476851851851856
+        }
+      }
+    },
+    {
+      "market_id": "5672230",
+      "event_id": "1184724",
+      "question": "M15 Maringa: Gabriel Roveri Sidney vs Denis Klok",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921561,
+      "close_time": 1792591200,
+      "duration_days": 7.750451388888889,
+      "volume": 1220.627886,
+      "outcome": 0.0,
+      "history_points": 131,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.26,
+          "timestamp": 1791985823,
+          "staleness_days": 0.006678240740740741
+        }
+      }
+    },
+    {
+      "market_id": "5672654",
+      "event_id": "1184829",
+      "question": "W35 Birmingham: Elena Malygina vs Mayuka Aikawa",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922458,
+      "close_time": 1792573200,
+      "duration_days": 7.531736111111111,
+      "volume": 1161.0443209999999,
+      "outcome": 0.0,
+      "history_points": 102,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.875,
+          "timestamp": 1791967819,
+          "staleness_days": 0.006724537037037037
+        }
+      }
+    },
+    {
+      "market_id": "5672679",
+      "event_id": "1184854",
+      "question": "W15 Bol: Mariya Yemshanova vs Zala Bizjak",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922460,
+      "close_time": 1792580400,
+      "duration_days": 7.615046296296296,
+      "volume": 1120.5799000000002,
+      "outcome": 0.0,
+      "history_points": 111,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.415,
+          "timestamp": 1791975023,
+          "staleness_days": 0.006678240740740741
+        }
+      }
+    },
+    {
+      "market_id": "5672189",
+      "event_id": "1184683",
+      "question": "M15 Offenbach: Lars Goran Verwerft vs Jelle Sels",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921556,
+      "close_time": 1792573200,
+      "duration_days": 7.542175925925926,
+      "volume": 1058.1208890000003,
+      "outcome": 0.0,
+      "history_points": 98,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.295,
+          "timestamp": 1791967819,
+          "staleness_days": 0.006724537037037037
+        }
+      }
+    },
+    {
+      "market_id": "5672683",
+      "event_id": "1184858",
+      "question": "W35 Monastir: Mariia Tkacheva vs Jenny Lim",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922459,
+      "close_time": 1792585800,
+      "duration_days": 7.677557870370371,
+      "volume": 1052.289151,
+      "outcome": 0.0,
+      "history_points": 137,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.51,
+          "timestamp": 1791980424,
+          "staleness_days": 0.006666666666666667
+        }
+      }
+    },
+    {
+      "market_id": "5672642",
+      "event_id": "1184817",
+      "question": "W35 Santa Margherita di Pula: Shiyu Ye vs Luisa Meyer auf der Heide",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791922456,
+      "close_time": 1792571400,
+      "duration_days": 7.510925925925926,
+      "volume": 1050.5189229999999,
+      "outcome": 0.0,
+      "history_points": 104,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.41,
+          "timestamp": 1791966021,
+          "staleness_days": 0.006701388888888889
+        }
+      }
+    },
+    {
+      "market_id": "5672164",
+      "event_id": "1184658",
+      "question": "M15 Heraklion: Benjamin Pietri vs Jakub Vrtilka",
+      "category": "",
+      "series": "ITF",
+      "start_time": 1791921552,
+      "close_time": 1792564200,
+      "duration_days": 7.438055555555556,
+      "volume": 1019.965899,
+      "outcome": 1.0,
+      "history_points": 105,
+      "credit_adjacent_keyword": false,
+      "snapshots": {
+        "7": {
+          "price": 0.875,
+          "timestamp": 1791958823,
+          "staleness_days": 0.006678240740740741
+        }
+      }
+    }
+  ]
+}
